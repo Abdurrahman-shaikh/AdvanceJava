@@ -17,7 +17,7 @@ public class Home extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         String user = request.getParameter("username");
         String pass = request.getParameter("password");
-        String url = "jdbc:mysql://localhost:3306/mydb?useSSL=false";
+        String url = "jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true";
         String username = "azmi";
         String password = "Aza@#11221";
         String query = "SELECT * FROM login_info";
@@ -35,6 +35,8 @@ public class Home extends HttpServlet {
             if (user.equals(s) && pass.equals(p)) {
                 out.println("You are logged in");
                 out.println("<a href =books>" + "Name of book" + "</a>");
+            }else{
+                out.println("Incorrect password");
             }
 
             out.println("<!DOCTYPE html>");
