@@ -18,7 +18,7 @@ public class FriendDetailsServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String friendId = request.getParameter("id");
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                String url = "jdbc:mysql://localhost:3306/mydb?useSSL=false";
+                String url = "jdbc:mysql://localhost:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true";
                 String username = "azmi";
                 String password = "Aza@#11221";
                 Connection con = DriverManager.getConnection(url, username, password);
