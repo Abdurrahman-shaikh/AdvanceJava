@@ -1,0 +1,14 @@
+<!-- index.jsp -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+</head>
+<body>
+  <jsp:include page="C.jspf" />
+
+  <!-- Rest of the content -->
+  <h2>Welcome to my website!</h2>
+  <p>Here is the main content of the page.</p>
+</body>
+</html>

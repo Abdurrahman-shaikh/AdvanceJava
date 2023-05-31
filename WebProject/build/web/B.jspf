@@ -1,0 +1,5 @@
+<footer>
+  <%-- any content can be specified here e.g.: --%>
+  <%@ page pageEncoding="UTF-8" %>
+  <h2>Footer!</h2>
+</footer>

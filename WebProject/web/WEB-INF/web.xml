@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+<!--    <welcome-file-list>
+        <welcome-file>mainPage.jsp</welcome-file>
+    </welcome-file-list>-->
     <servlet>
         <servlet-name>NewServlet</servlet-name>
         <servlet-class>mypkg.NewServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>myjsp</servlet-name>
-        <jsp-file>WEB-INF/myfile/myjsp.jsp</jsp-file> 
+        <jsp-file>WEB-INF/myfile/myjsp.jsp</jsp-file>
+        <init-param>
+            <param-name>city1</param-name>
+            <param-value>Lucknow</param-value>
+        </init-param>
     </servlet>
     <context-param>
         <param-name>country1</param-name>
-            <param-value>India</param-value> 
+        <param-value>India</param-value>
     </context-param>
     <servlet>
         <servlet-name>myjsp2</servlet-name>
         <jsp-file>WEB-INF/myfile/myjsp2.jsp</jsp-file>
-        <init-param>
-            <param-name>city1</param-name>
-            <param-value>Lucknow</param-value>  
-        </init-param>
     </servlet>
     <servlet>
         <servlet-name>Servlet1</servlet-name>
@@ -52,6 +55,10 @@
             <param-value>Aza@#11221</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>Dispatcher</servlet-name>
+        <servlet-class>mypkg.Dispatcher</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/responder</url-pattern>
@@ -77,6 +84,10 @@
         <url-pattern>/JS</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>Dispatcher</servlet-name>
+        <url-pattern>/D</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>Jdbc</servlet-name>
         <url-pattern>/Jdbc</url-pattern>
     </servlet-mapping>
@@ -88,4 +99,29 @@
         <servlet-name>myjsp2</servlet-name>
         <url-pattern>/mp2</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>dis</servlet-name>
+        <jsp-file>WEB-INF/myfile/dis.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dis</servlet-name>
+        <url-pattern>/dis</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>example</servlet-name>
+    <jsp-file>/WEB-INF/example.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>example</servlet-name>
+    <url-pattern>/example</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>mainPage</servlet-name>
+    <jsp-file>WEB-INF/myfile/mainPage.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>mainPage</servlet-name>
+    <url-pattern>/mainPage</url-pattern>
+</servlet-mapping>
+
 </web-app>
